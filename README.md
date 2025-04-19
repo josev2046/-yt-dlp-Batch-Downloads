@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15249279.svg)](https://doi.org/10.5281/zenodo.15249279)
 
-`yt-dlp` is a popular and versatile tool of our trade. This repository illustrates how to download multiple URLs using the `yt-dlp` command-line tool with a batch file. **Please ensure you have the necessary rights or permissions from the copyright owner before downloading any content.**
+This repository illustrates how to download multiple URLs using the `yt-dlp` command-line tool with a batch file. **Please ensure you have the necessary rights or permissions from the copyright owner before downloading any content.**
 
 ![image](https://github.com/user-attachments/assets/a426350e-8a5c-4974-8076-6f9d2a76f3c9)
 
