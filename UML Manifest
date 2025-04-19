@@ -1,0 +1,26 @@
+@startuml
+skinparam backgroundColor #F0F0F0
+skinparam defaultFontName Arial
+skinparam participantBackgroundColor #ADD8E6
+skinparam participantBorderColor #87CEEB
+skinparam arrowColor #2F4F4F
+skinparam stereotypeFontColor #191970
+skinparam noteBackgroundColor #FFFFCC
+skinparam noteBorderColor #808080
+
+participant "yt-dlp Process" as YTDLP <<process>>
+participant "urls.txt File" as File <<file>>
+participant "Online Video Platform" as OVP
+participant "Local File System" as LocalFS <<filesystem>>
+
+note left of YTDLP: Executes:\n`yt-dlp -a urls.txt`
+
+YTDLP -> File: Reads each URL line by line
+loop For each URL in urls.txt
+  YTDLP -> YTDLP: Processes URL
+  YTDLP -> OVP: Requests video data
+  OVP -> YTDLP: Streams video data
+  YTDLP -> LocalFS: Saves downloaded video
+end
+YTDLP --> YTDLP: Completes download(s)
+@enduml
